@@ -1,21 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stanley - Community Manager Portfolio</title>
     
-    <!-- Font Awesome Icons - Updated CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
     
     <style>
-        /* ===== COLOR PALETTE =====
-         * Primary: #2C3E50 (Dark Blue-Gray)
-         * Accent: #3498DB (Bright Blue)
-         * Secondary: #E74C3C (Coral Red)
-         * Light: #ECF0F1 (Light Gray)
-         * Dark Text: #2C3E50
-         * ======================== */
 
         * {
             margin: 0;
@@ -41,7 +33,6 @@
             color: #2C3E50;
         }
 
-        /* ===== NAVIGATION ===== */
         nav {
             position: fixed;
             top: 0;
@@ -82,8 +73,6 @@
             display: inline-block;
             transition: all 0.3s ease;
         }
-
-        /* Glowing underline effect on hover */
         nav ul li a::after {
             content: '';
             position: absolute;
@@ -105,7 +94,6 @@
             width: 100%;
         }
 
-        /* Mobile menu toggle */
         .menu-toggle {
             display: none;
             background: none;
@@ -114,8 +102,6 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-
-        /* ===== HERO SECTION ===== */
         #hero {
             height: 100vh;
             background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
@@ -128,9 +114,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* ===== ANIMATED BACKGROUND ===== */
-        /* Animated gradient background layer */
         .hero-bg-animated {
             position: absolute;
             top: -50%;
@@ -151,8 +134,6 @@
             opacity: 0.8;
             z-index: 0;
         }
-
-        /* Floating orbs/particles overlay */
         .hero-orb {
             position: absolute;
             border-radius: 50%;
@@ -163,7 +144,6 @@
             z-index: 1;
         }
 
-        /* Individual orb variations */
         .hero-orb-1 {
             width: 400px;
             height: 400px;
@@ -191,8 +171,6 @@
             animation-delay: 10s;
             background: radial-gradient(circle at 30% 30%, rgba(231, 76, 60, 0.3), transparent);
         }
-
-        /* Mesh/grid overlay for depth */
         .hero-mesh {
             position: absolute;
             top: 0;
@@ -207,13 +185,11 @@
             z-index: 2;
         }
 
-        /* Content layer (stays on top) */
         #hero .hero-content {
             position: relative;
             z-index: 10;
         }
 
-        /* Gradient animation keyframes */
         @keyframes gradientShift {
             0% {
                 background-position: 0% 50%;
@@ -238,8 +214,6 @@
                 transform: translate(-20px, 20px) scale(0.9);
             }
         }
-
-        /* Fallback for older browsers */
         @supports not (backdrop-filter: blur(10px)) {
             .hero-bg-animated {
                 opacity: 0.9;
@@ -284,7 +258,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Typing animation styles */
         #typed-text {
             display: inline-block;
             min-width: 150px;
@@ -301,7 +274,6 @@
             51%, 100% { opacity: 0; }
         }
 
-        /* ===== SECTION STYLES ===== */
         section {
             padding: 5rem 2rem;
         }
@@ -324,7 +296,7 @@
             cursor: default;
         }
 
-        /* Animated underline that's always visible */
+      
         .section-title::after {
             content: '';
             position: absolute;
@@ -337,7 +309,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Hover effect: lift text and expand/glow underline */
+
         .section-title:hover {
             transform: translateY(-5px);
         }
@@ -348,7 +320,7 @@
             box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
         }
 
-        /* ===== ABOUT SECTION ===== */
+     
         #about {
             background: linear-gradient(135deg, #E8EEF1 0%, #D5DBDB 100%);
         }
@@ -375,7 +347,6 @@
             cursor: pointer;
         }
 
-        /* Hover effect: glow and lift */
         .about-photo img:hover {
             transform: scale(1.08) translateY(-10px);
             border-color: #E74C3C;
@@ -396,7 +367,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Glow underline effect for About section heading */
         .about-text h3::after {
             content: '';
             position: absolute;
@@ -424,7 +394,7 @@
             margin-bottom: 1rem;
         }
 
-        /* ===== SKILLS SECTION ===== */
+
         #skills {
             background: linear-gradient(135deg, #FFFFFF 0%, #ECF0F1 100%);
         }
@@ -444,7 +414,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Animated underline for skills category titles */
         .skills-category h3::after {
             content: '';
             position: absolute;
@@ -491,7 +460,6 @@
             color: #666;
         }
 
-        /* ===== PROJECTS SECTION ===== */
         #projects {
             background: linear-gradient(135deg, #DDE4E8 0%, #C5CDD3 100%);
         }
@@ -543,7 +511,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Subtle underline glow on project titles */
         .project-content h3::after {
             content: '';
             position: absolute;
@@ -600,12 +567,12 @@
 }
 
 
-        /* ===== TESTIMONIALS SECTION (IMAGE-ONLY HORIZONTAL SCROLL) ===== */
+     
         #testimonials {
             background: linear-gradient(135deg, #FFFFFF 0%, #F8F9F9 100%);
         }
         
-        /* Container for the scrolling area - RECTANGLE SHAPE */
+      
         .client-scroll-container {
             max-width: 100%;
             margin: 0 auto;
@@ -617,7 +584,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
 
-        /* Track that holds all client images - HORIZONTAL LAYOUT */
+       
         .client-scroll-track {
             display: flex;
             flex-direction: row;
@@ -627,12 +594,12 @@
             width: max-content;
         }
 
-        /* Pause animation on hover */
+     
         .client-scroll-container:hover .client-scroll-track {
             animation-play-state: paused;
         }
 
-        /* Individual client image wrapper */
+    
         .client-image-wrapper {
             display: flex;
             justify-content: center;
@@ -641,7 +608,7 @@
             flex-shrink: 0;
         }
 
-        /* Client image styling - RECTANGLE SHAPE */
+
         .client-image-wrapper img {
             width: 280px;
             height: 180px;
@@ -652,14 +619,14 @@
             transition: all 0.4s ease;
         }
 
-        /* Hover effect on images */
+
         .client-image-wrapper:hover img {
             transform: scale(1.08) translateY(-5px);
             box-shadow: 0 15px 50px rgba(52, 152, 219, 0.5);
             border-color: #E74C3C;
         }
 
-        /* Horizontal auto-scroll animation */
+   
         @keyframes horizontalAutoScroll {
             0% {
                 transform: translateX(0);
@@ -668,8 +635,6 @@
                 transform: translateX(calc(-280px * 5 - 3rem * 5));
             }
         }
-
-        /* ===== CONTACT SECTION ===== */
         #contact {
             background: linear-gradient(135deg, #E8EEF1 0%, #D5DBDB 100%);
         }
@@ -763,7 +728,7 @@
             box-shadow: 0 8px 25px rgba(52, 152, 219, 0.5);
         }
 
-        /* Individual icon colors on hover */
+   
         .social-links a.telegram:hover {
             background: #0088cc;
         }
@@ -780,7 +745,7 @@
             background: #EA4335;
         }
 
-        /* ===== FOOTER ===== */
+  
         footer {
             background: #2C3E50;
             color: #fff;
@@ -792,7 +757,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Footer Social Icons */
         .footer-social {
             display: flex;
             justify-content: center;
@@ -858,7 +822,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer Social Icons */
+   
         .footer-social {
             display: flex;
             justify-content: center;
@@ -904,7 +868,7 @@
             color: #fff;
         }
 
-        /* ===== ANIMATIONS ===== */
+       
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -916,21 +880,20 @@
             }
         }
 
-        /* ===== SCROLL REVEAL ANIMATIONS ===== */
-        /* Base state: hidden before scroll */
+
         .scroll-reveal {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        /* Visible state: triggered by Intersection Observer */
+ 
         .scroll-reveal.revealed {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Fade-in animation (no movement) */
+     
         .scroll-fade {
             opacity: 0;
             transition: opacity 0.8s ease;
@@ -940,7 +903,7 @@
             opacity: 1;
         }
 
-        /* Slide from left */
+
         .scroll-slide-left {
             opacity: 0;
             transform: translateX(-50px);
@@ -952,7 +915,7 @@
             transform: translateX(0);
         }
 
-        /* Slide from right */
+    
         .scroll-slide-right {
             opacity: 0;
             transform: translateX(50px);
@@ -964,14 +927,14 @@
             transform: translateX(0);
         }
 
-        /* Stagger delay for multiple items */
+      
         .scroll-reveal:nth-child(1) { transition-delay: 0.1s; }
         .scroll-reveal:nth-child(2) { transition-delay: 0.2s; }
         .scroll-reveal:nth-child(3) { transition-delay: 0.3s; }
         .scroll-reveal:nth-child(4) { transition-delay: 0.4s; }
         .scroll-reveal:nth-child(5) { transition-delay: 0.5s; }
 
-        /* ===== RESPONSIVE DESIGN ===== */
+   
         @media (max-width: 992px) {
             .client-scroll-container {
                 height: 220px;
@@ -993,7 +956,7 @@
         }
 
             @media (max-width: 768px) {
-            /* Reduce orb sizes on mobile for better performance */
+        
             .hero-orb-1 {
                 width: 250px;
                 height: 250px;
@@ -1009,7 +972,7 @@
                 height: 220px;
             }
 
-            /* Simplify mesh on mobile */
+        
             .hero-mesh {
                 background-size: 30px 30px;
             }
@@ -1080,7 +1043,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
     
     <nav>
         <div class="container">
@@ -1097,22 +1060,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+
     <section id="hero">
-        <!-- ===== ANIMATED BACKGROUND LAYERS ===== -->
-        <!-- Animated gradient background -->
+
         <div class="hero-bg-animated"></div>
         
-        <!-- Floating orbs for depth and movement -->
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
-        
-        <!-- Mesh overlay for texture -->
+
         <div class="hero-mesh"></div>
-        <!-- ===== END ANIMATED BACKGROUND ===== -->
-        
-        <!-- Hero content (stays on top) -->
+
+    
         <div class="hero-content">
             <h1>Stanley</h1>
             <p class="title">I am a <span id="typed-text"></span><span class="cursor">|</span> Manager</p>
@@ -1121,7 +1080,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+   
     <section id="about" class="scroll-reveal">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -1146,7 +1105,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+ 
     <section id="skills" class="scroll-reveal">
         <div class="container">
             <h2 class="section-title">Skills & Tools</h2>
@@ -1202,7 +1161,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+
     <section id="projects" class="scroll-reveal">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
@@ -1286,7 +1245,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+ 
     <section id="testimonials" class="scroll-reveal">
         <div class="container">
             <h2 class="section-title">What Clients Say</h2>
@@ -1337,7 +1296,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+
     <section id="contact" class="scroll-reveal">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -1377,7 +1336,7 @@
     </section>
 
     <script>
-        // ===== TYPING ANIMATION =====
+  
         const words = ["Social Media", "Community"];
         let wordIndex = 0;
         let charIndex = 0;
@@ -1413,12 +1372,12 @@
             }
         }
 
-        // Start typing when page loads
+        
         window.onload = function() {
             setTimeout(type, 500);
         };
 
-        // ===== MOBILE MENU =====
+      
         function toggleMenu() {
             document.getElementById('nav-menu').classList.toggle('active');
         }
@@ -1427,7 +1386,7 @@
             document.getElementById('nav-menu').classList.remove('active');
         }
 
-        // ===== FORM HANDLER =====
+  
         function handleSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
@@ -1436,7 +1395,7 @@
             event.target.reset();
         }
 
-        // ===== SMOOTH SCROLL =====
+       
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1447,32 +1406,32 @@
             });
         });
 
-        // ===== NAV SCROLL EFFECT =====
+   
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             nav.style.background = window.scrollY > 100 ? 'rgba(44, 62, 80, 1)' : 'rgba(44, 62, 80, 0.95)';
         });
 
-        // ===== SCROLL REVEAL ANIMATION (INTERSECTION OBSERVER) =====
+    
         
-        // Create the Intersection Observer
+
         const observerOptions = {
-            threshold: 0.1, // Trigger when 10% of element is visible
-            rootMargin: '0px 0px -50px 0px' // Start animation slightly before element enters viewport
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px' 
         };
 
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
-                // When element enters viewport
+               
                 if (entry.isIntersecting) {
                     entry.target.classList.add('revealed');
-                    // Optional: Stop observing after reveal (animation happens only once)
+                
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all elements with scroll animation classes
+     
         function initScrollAnimations() {
             const scrollElements = document.querySelectorAll('.scroll-reveal, .scroll-fade, .scroll-slide-left, .scroll-slide-right');
             
@@ -1481,13 +1440,395 @@
             });
         }
 
-        // Initialize scroll animations when page loads
+      
         window.addEventListener('load', function() {
             initScrollAnimations();
         });
 
-        // ===== END SCROLL REVEAL ANIMATION =====
+      
     </script>
 </body>
 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley is Very Awesome!</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Black', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+            position: relative;
+        }
+
+        /* Animated background */
+        .background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        /* Stars background */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        /* Main text container */
+        .text-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            perspective: 1000px;
+        }
+
+        /* Individual word styling */
+        .word {
+            display: inline-block;
+            font-size: 8rem;
+            font-weight: 900;
+            margin: 0 20px;
+            opacity: 0;
+            transform: scale(0) rotateX(180deg);
+        }
+
+        .word.stanley {
+            animation: explodeIn 1s ease forwards;
+            color: #fff;
+            text-shadow: 
+                0 0 10px #ff0080,
+                0 0 20px #ff0080,
+                0 0 30px #ff0080,
+                0 0 40px #ff0080,
+                0 0 70px #ff0080,
+                0 0 80px #ff0080,
+                0 0 100px #ff0080;
+        }
+
+        .word.is {
+            animation: explodeIn 1s ease 0.3s forwards;
+            color: #40e0d0;
+            text-shadow: 
+                0 0 10px #40e0d0,
+                0 0 20px #40e0d0,
+                0 0 30px #40e0d0,
+                0 0 40px #40e0d0;
+        }
+
+        .word.very {
+            animation: explodeIn 1s ease 0.6s forwards;
+            color: #ff8c00;
+            text-shadow: 
+                0 0 10px #ff8c00,
+                0 0 20px #ff8c00,
+                0 0 30px #ff8c00,
+                0 0 40px #ff8c00,
+                0 0 70px #ff8c00;
+        }
+
+        .word.awesome {
+            animation: explodeIn 1s ease 0.9s forwards;
+            background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #7b68ee);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: explodeIn 1s ease 0.9s forwards, rainbowShift 3s ease infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 128, 0.8))
+                    drop-shadow(0 0 40px rgba(64, 224, 208, 0.6));
+        }
+
+        /* Letter animations for AWESOME */
+        .letter {
+            display: inline-block;
+            animation: bounce 0.6s ease infinite;
+        }
+
+        .letter:nth-child(1) { animation-delay: 0s; }
+        .letter:nth-child(2) { animation-delay: 0.1s; }
+        .letter:nth-child(3) { animation-delay: 0.2s; }
+        .letter:nth-child(4) { animation-delay: 0.3s; }
+        .letter:nth-child(5) { animation-delay: 0.4s; }
+        .letter:nth-child(6) { animation-delay: 0.5s; }
+        .letter:nth-child(7) { animation-delay: 0.6s; }
+
+        /* Particle burst effect */
+        .particle-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        /* Fireworks */
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: fireworkExplode 2s ease-out forwards;
+        }
+
+        /* Animations */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes explodeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0) rotateX(180deg) rotateZ(180deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.3) rotateX(0deg) rotateZ(-10deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotateX(0deg) rotateZ(0deg);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.2); }
+        }
+
+        @keyframes rainbowShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes particleBurst {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(0);
+            }
+        }
+
+        @keyframes fireworkExplode {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--fx), var(--fy));
+            }
+        }
+
+        /* Glitch effect that kicks in after text loads */
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-5px, 5px);
+            }
+            40% {
+                transform: translate(-5px, -5px);
+            }
+            60% {
+                transform: translate(5px, 5px);
+            }
+            80% {
+                transform: translate(5px, -5px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .text-container.loaded {
+            animation: glitch 0.3s ease infinite;
+            animation-delay: 2s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .word {
+                font-size: 4rem;
+                margin: 10px 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .word {
+                font-size: 2.5rem;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="background"></div>
+    
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Particle container -->
+    <div class="particle-container" id="particles"></div>
+
+    <!-- Main text -->
+    <div class="text-container" id="textContainer">
+        <span class="word stanley">STANLEY</span>
+        <span class="word is">IS</span>
+        <span class="word very">A GAY</span>
+        <span class="word awesome" id="faggg">FAGGG</span>
+    </div>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Split "AWESOME" into letters
+        const awesomeWord = document.getElementById('awesome');
+        const awesomeText = 'AWESOME';
+        awesomeWord.innerHTML = awesomeText.split('').map(letter => 
+            `<span class="letter">${letter}</span>`
+        ).join('');
+
+        // Create particle burst effect
+        function createParticleBurst() {
+            const particlesContainer = document.getElementById('particles');
+            const colors = ['#ff0080', '#ff8c00', '#40e0d0', '#7b68ee', '#00ff00'];
+            
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.left = '50%';
+                particle.style.top = '50%';
+                
+                const angle = (Math.PI * 2 * i) / 100;
+                const velocity = 200 + Math.random() * 300;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.animation = `particleBurst ${1 + Math.random()}s ease-out forwards`;
+                particle.style.animationDelay = (0.9 + Math.random() * 0.3) + 's';
+                
+                particlesContainer.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 3000);
+            }
+        }
+
+        // Create continuous fireworks
+        function createFirework() {
+            const particlesContainer = document.getElementById('particles');
+            const colors = ['#ff0080', '#ff8c00', '#40e0d0', '#7b68ee', '#ff69b4'];
+            
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            
+            for (let i = 0; i < 30; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                firework.style.left = x + 'px';
+                firework.style.top = y + 'px';
+                
+                const angle = (Math.PI * 2 * i) / 30;
+                const distance = 100 + Math.random() * 100;
+                const fx = Math.cos(angle) * distance;
+                const fy = Math.sin(angle) * distance;
+                
+                firework.style.setProperty('--fx', fx + 'px');
+                firework.style.setProperty('--fy', fy + 'px');
+                
+                particlesContainer.appendChild(firework);
+                
+                setTimeout(() => firework.remove(), 2000);
+            }
+        }
+
+        // Trigger particle burst when text loads
+        setTimeout(() => {
+            createParticleBurst();
+            document.getElementById('textContainer').classList.add('loaded');
+        }, 1200);
+
+        // Create fireworks every 2 seconds after initial animation
+        setTimeout(() => {
+            setInterval(createFirework, 2000);
+        }, 2000);
+
+        // Add random glitch effect
+        setInterval(() => {
+            const words = document.querySelectorAll('.word');
+            const randomWord = words[Math.floor(Math.random() * words.length)];
+            randomWord.style.animation = 'none';
+            setTimeout(() => {
+                randomWord.style.animation = '';
+            }, 100);
+        }, 3000);
+    </script>
+</body>
 </html>
